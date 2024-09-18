@@ -1,0 +1,258 @@
+/* Reset básico para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos gerais do corpo */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  /* Estilos para a seção "Sobre Mim" */
+#about {
+    padding: 2rem;
+  }
+  
+  .about-container {
+    display: flex; /* Usa Flexbox para dividir a seção em duas colunas */
+    align-items: center; /* Centraliza verticalmente a foto e o texto */
+    justify-content: space-between; /* Distribui os itens entre o espaço disponível */
+  }
+  
+  .about-photo {
+    flex: 1; /* Define a largura da foto como 1 parte da área total */
+    margin-right: 1rem; /* Espaçamento entre a foto e o texto */
+  }
+  
+  .about-photo img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    border-radius: 10px; /* Adiciona bordas arredondadas na foto */
+}
+  
+  .about-text {
+    flex: 2; /* Define a largura do texto como 2 partes da área total */
+    text-align: left; /* Garante que o texto fique alinhado à esquerda */
+  }
+  
+  /* Estilos adicionais para mobile */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column; /* Para telas menores, os itens ficarão em uma única coluna */
+      text-align: center; /* Centraliza o conteúdo em telas menores */
+    }
+  
+    .about-photo {
+      margin-right: 0; /* Remove a margem lateral no modo coluna */
+      margin-bottom: 1rem; /* Adiciona espaçamento entre a foto e o texto */
+    }
+  
+    .about-text {
+      text-align: center; /* Centraliza o texto em telas menores */
+    }
+  }
+.center{
+    text-align: center;
+}
+  #projects a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+  #projects a:visited {
+    color: inherit; 
+  }
+  /* Estilos do header */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    position: sticky; /* Torna o header "grudado" no topo ao rolar */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Mantém o header sobre outros elementos */
+  }
+  header li{
+    transition: transform 0.3s;
+
+  }
+  header nav {
+    display: flex;
+    justify-content: space-between; /* Divide o h1 à esquerda e a lista à direita */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+  }
+  
+  header h1 {
+    margin-left: 1rem;
+  }
+  
+  header ul {
+    list-style: none;
+    display: flex; /* Exibe os itens em linha */
+    margin-right: 1rem;
+  }
+  
+  header ul li {
+    margin-left: 1rem;
+  }
+  
+  header ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Seções e elementos */
+  #skills, #intro, footer {
+    background-color: #504f4f;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  #around {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    transition: transform 0.3s;
+  }
+  .box {
+    display: flex; /* Torna o box um contêiner flex */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    text-align: center; /* Garante que o texto dentro das caixas esteja centralizado */
+    background-color: rgb(57, 56, 56);
+    padding: 50px;
+    margin: 20px;
+    height: 200px;
+    width: 40%;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .box:hover {
+    transform: scale(1.05);
+  }
+  
+  .icons {
+    width: 40px;
+    transition: transform 0.3s ease-in-out; 
+  }
+  .icons:hover {
+    transform: scale(1.05);
+  }
+  #contacts {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+  
+  section {
+    padding: 2rem;
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    list-style-type: square;
+    padding-left: 20px;
+  }
+  
+  /* Estilos dos cartões de projeto */
+  .project-card {
+    background-color: white;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    transition: transform 0.3s;
+  }
+
+  .sticky li:hover {
+    transform: scale(1.05);
+  }
+
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Estilos do footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    margin-top: 2rem;
+  }
+  
+  /* Animações */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  #intro {
+    animation: fadeIn 2s;
+  }
+
+  .line {
+  color: rgba(255, 254, 255, 0.70);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2em;
+  text-align: center;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 27em; /* Define o tamanho do contêiner */
+}
+
+.typing-animation {
+  animation: typing 1s steps(40) 1s normal both,
+             erasePartial 2s steps(18) 6s normal both,
+             retype 3s steps(22) 8s normal both;
+  animation-iteration-count: infinite; /* Torna a animação infinita */
+}
+
+@keyframes blinkCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 27em; /* Digita todo o texto */
+  }
+}
+
+@keyframes erasePartial {
+  from {
+    width: 27em; /* Começa com o texto completo */
+  }
+  to {
+    width: 18ch; /* Apaga até o caractere 18 */
+  }
+}
+
+@keyframes retype {
+  from {
+    width: 18ch; /* Começa com 18 caracteres */
+  }
+  to {
+    width: 27em; /* Digita novamente o texto até o final */
+  }
+}
