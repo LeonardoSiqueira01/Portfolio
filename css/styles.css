@@ -1,58 +1,46 @@
-/* Reset básico para todos os elementos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  
-  /* Estilos gerais do corpo */
+ 
   body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
   }
-  /* Estilos para a seção "Sobre Mim" */
+  
 #about {
     padding: 2rem;
   }
   
+  .container{
+    background-color: #504f4f;
+    color: white;
+  }
+
   .about-container {
-    display: flex; /* Usa Flexbox para dividir a seção em duas colunas */
-    align-items: center; /* Centraliza verticalmente a foto e o texto */
-    justify-content: space-between; /* Distribui os itens entre o espaço disponível */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
   }
   
   .about-photo {
-    flex: 1; /* Define a largura da foto como 1 parte da área total */
-    margin-right: 1rem; /* Espaçamento entre a foto e o texto */
+    flex: 1;
+    margin-right: 1rem; 
   }
   
   .about-photo img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
-    border-radius: 10px; /* Adiciona bordas arredondadas na foto */
+    max-width: 100%; 
+    border-radius: 10px; 
 }
   
   .about-text {
-    flex: 2; /* Define a largura do texto como 2 partes da área total */
-    text-align: left; /* Garante que o texto fique alinhado à esquerda */
+    flex: 2; 
+    text-align: left; 
   }
   
-  /* Estilos adicionais para mobile */
-  @media (max-width: 768px) {
-    .about-container {
-      flex-direction: column; /* Para telas menores, os itens ficarão em uma única coluna */
-      text-align: center; /* Centraliza o conteúdo em telas menores */
-    }
-  
-    .about-photo {
-      margin-right: 0; /* Remove a margem lateral no modo coluna */
-      margin-bottom: 1rem; /* Adiciona espaçamento entre a foto e o texto */
-    }
-  
-    .about-text {
-      text-align: center; /* Centraliza o texto em telas menores */
-    }
-  }
+
 .center{
     text-align: center;
 }
@@ -64,15 +52,15 @@
   #projects a:visited {
     color: inherit; 
   }
-  /* Estilos do header */
+  
   header {
     background-color: #333;
     color: white;
     padding: 1rem;
-    position: sticky; /* Torna o header "grudado" no topo ao rolar */
+    position: sticky; 
     top: 0;
     width: 100%;
-    z-index: 1000; /* Mantém o header sobre outros elementos */
+    z-index: 1000; 
   }
   header li{
     transition: transform 0.3s;
@@ -80,8 +68,8 @@
   }
   header nav {
     display: flex;
-    justify-content: space-between; /* Divide o h1 à esquerda e a lista à direita */
-    align-items: center; /* Centraliza verticalmente o conteúdo */
+    justify-content: space-between;
+    align-items: center; 
   }
   
   header h1 {
@@ -90,7 +78,7 @@
   
   header ul {
     list-style: none;
-    display: flex; /* Exibe os itens em linha */
+    display: flex; 
     margin-right: 1rem;
   }
   
@@ -102,35 +90,69 @@
     color: white;
     text-decoration: none;
   }
-  
-  /* Seções e elementos */
-  #skills, #intro, footer {
+ 
+  #intro, footer {
     background-color: #504f4f;
     color: white;
     text-align: center;
     padding: 2rem;
+    box-shadow: 2 20px 25px rgba(58, 55, 55, 0.2);
   }
   
-  #around {
+ #around {
     display: flex;
     justify-content: space-around;
     padding: 20px;
-    transition: transform 0.3s;
-  }
+    transition: transform 0.4s;
+  } 
   .box {
-    display: flex; /* Torna o box um contêiner flex */
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    text-align: center; /* Garante que o texto dentro das caixas esteja centralizado */
+    display: inline-block; 
+    text-align: center; 
     background-color: rgb(57, 56, 56);
-    padding: 50px;
-    margin: 20px;
-    height: 200px;
+    padding: 30px;
+    margin: 20px; 
+    height: 280px;
+    justify-content: center;
     width: 40%;
-    transition: transform 0.3s ease-in-out;
-    border-radius: 5px;
+    border-radius: 20px;
     border: 1px solid #ccc;
+    color: white;
+    box-shadow: 0 15px 22px rgb(35, 35, 35);
+    transition: 0.5s ease-in-out; 
   }
+  .box p {
+    margin-bottom: 20px; 
+  }
+  
+  .container .barras {
+  background-color: #ffffff;
+  display: block;
+  height: 20px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.barras{
+  margin-bottom: 15px;
+}
+
+.barras > span {
+  height: 20px;
+  background: linear-gradient(to right, #141319, #888484);
+  position: absolute;
+  left: 0;
+  width: 0%; 
+  transition: width 0.5s ease-in-out; 
+}
+
+  .bar{
+    height: 18px;
+    background-color: #eee;
+    margin-bottom: 15px;
+    border-radius: 15px;
+  }
+
   .box:hover {
     transform: scale(1.05);
   }
@@ -138,9 +160,12 @@
   .icons {
     width: 40px;
     transition: transform 0.3s ease-in-out; 
+    cursor: pointer; 
   }
   .icons:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out; 
+
   }
   #contacts {
     display: flex;
@@ -161,7 +186,7 @@
     padding-left: 20px;
   }
   
-  /* Estilos dos cartões de projeto */
+  
   .project-card {
     background-color: white;
     margin: 1rem auto;
@@ -180,7 +205,7 @@
     transform: scale(1.05);
   }
   
-  /* Estilos do footer */
+  
   footer {
     text-align: center;
     padding: 1rem;
@@ -189,7 +214,7 @@
     margin-top: 2rem;
   }
   
-  /* Animações */
+  
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -211,15 +236,16 @@
   border-right: 2px solid rgba(255, 255, 255, 0.75);
   white-space: nowrap;
   overflow: hidden;
-  width: 27em; /* Define o tamanho do contêiner */
+  width: 27em; 
 }
 
 .typing-animation {
   animation: typing 1s steps(40) 1s normal both,
              erasePartial 2s steps(18) 6s normal both,
              retype 3s steps(22) 8s normal both;
-  animation-iteration-count: infinite; /* Torna a animação infinita */
+  animation-iteration-count: infinite;
 }
+
 
 @keyframes blinkCursor {
   from {
@@ -235,24 +261,297 @@
     width: 0;
   }
   to {
-    width: 27em; /* Digita todo o texto */
+    width: 27em; 
   }
 }
 
 @keyframes erasePartial {
   from {
-    width: 27em; /* Começa com o texto completo */
+    width: 27em; 
   }
   to {
-    width: 18ch; /* Apaga até o caractere 18 */
+    width: 18ch; 
   }
 }
 
 @keyframes retype {
   from {
-    width: 18ch; /* Começa com 18 caracteres */
+    width: 18ch;
   }
   to {
-    width: 27em; /* Digita novamente o texto até o final */
+    width: 27em; 
   }
+}
+
+.java{
+  width:95%;
+  animation: java 3s forwards;
+}
+.spring{
+  width:80%;
+  animation: spring 3s forwards;
+
+}
+.c{
+  width:30%;
+  animation: c 3s forwards;
+
+}
+.html{
+  width:60%;
+  animation: html 3s forwards;
+
+}
+.css{
+  width:40%;
+  animation: css 3s forwards;
+
+}
+.javascript{
+  width:30%;
+  animation: javascript 3s forwards;
+
+}
+.react{
+  width:10%;
+  animation: react 3s forwards;
+
+}
+.mysql{
+  width:40%;
+  animation: mysql 3s forwards;
+
+}
+.postgresql{
+  width:40%;
+  animation: postgresql 3s forwards;
+
+}
+.mongodb{
+  width:20%;
+  animation: mongodb 3s forwards;
+}
+
+.git{
+  width:80%;
+  animation: git 3s forwards;
+
+}
+.github{
+  width:80%;
+  animation: github 3s forwards;
+
+}
+.barras:hover > span {
+  transition: transform 0.5s ease-in-out; 
+}
+
+@keyframes java {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 95%;
+  }
+}
+@keyframes spring {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 80%;
+  }
+}
+@keyframes c {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 30%;
+  }
+}
+@keyframes html {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 60%;
+  }
+}
+@keyframes css {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 40%;
+  }
+}
+@keyframes javascript {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 30%;
+  }
+}
+@keyframes react {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 10%;
+  }
+}
+@keyframes mysql {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 40%;
+  }
+}
+@keyframes postgresql {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 40%;
+  }
+}
+@keyframes mongodb {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 20%;
+  }
+}
+@keyframes git {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 80%;
+  }
+}
+
+
+@keyframes github {
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 80%;
+  }
+}
+
+
+@media (max-width: 780px) {
+  
+  body {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+  }
+
+  header h1 {
+    font-size: small;
+    
+  }
+  
+  header ul {
+    flex-direction: row; 
+    align-items: center;
+    margin: 2;
+  }
+  header a {
+    padding: 6px;
+
+  }
+
+  header ul li {
+    margin-left: 0;
+    padding: 0.5rem 0;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-photo {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .about-text {
+    width: 80%;
+    text-align: center;
+  }
+
+  
+  .project-card {
+    width: 100%; 
+    padding: 1rem;
+  }
+
+
+  #around {
+    flex-direction: column;
+  }
+
+  .box {
+    width: 80%; 
+    margin: 10px 0; 
+    padding: 15px; 
+    height: auto; 
+  }
+
+  .container .barras {
+    height: 15px; 
+  }
+
+  .barras > span {
+    height: 15px; 
+  }
+
+
+  footer {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+
+ 
+  .icons {
+    width: 30px; 
+  }
+
+  .line {
+    font-size: 1.5em; 
+    width: 90%; 
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; 
+    text-align: center; 
+  }
+  #intro{
+   font-size: 80%;
+  }
+
+  .about-photo {
+    margin-right: 0; 
+    margin-bottom: 1rem; 
+  }
+
+  .about-text {
+    text-align: center; 
+  }
+}
+
+@media (max-width: 768px) {
+  #intro{
+    font-size: 60%;
+   }
 }
